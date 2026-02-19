@@ -27,9 +27,13 @@ export default function App() {
     const updateCart = cart.filter((_, i) => i != index)
     setCart(updateCart)
   }
+
+  const totalAmount = cart.reduce((total,index)=>(total + index.price ,0))
   return(
     <>
-      <Ecom products={product} addToCart={addToCart} />
+      <Ecom cart={cart.length}/>
+      <ProductList/>
+      <Cart />
     </>
   )
 }

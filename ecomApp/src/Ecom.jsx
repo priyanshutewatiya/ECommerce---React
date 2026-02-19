@@ -1,7 +1,8 @@
-export default function Ecom() {
+export default function Ecom({cartCount}) {
     return (
         <div>
-            <h1>Welcome to Ecom App</h1>
+           <h2>React App</h2>
+           <p>Cart Item : {cartCount}</p>
         </div>
     )
 }
